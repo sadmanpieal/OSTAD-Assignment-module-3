@@ -5,7 +5,9 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Cloning repository...'
-                
+               
+                sh 'git clone git@github.com:sadmanpieal/OSTAD-Assignment-module-3.git'
+            }
         }
 
         stage('Install') {
