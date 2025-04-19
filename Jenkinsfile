@@ -5,22 +5,24 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Cloning repository...'
-               
-                sh 'git clone git@github.com:sadmanpieal/OSTAD-Assignment-module-3.git'
+              
+                bat 'git clone https://github.com/sadmanpieal/OSTAD-Assignment-module-3.git'
             }
         }
 
         stage('Install') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'npm install'
+               
+                bat 'npm install'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'npm run check'
+           
+                bat 'npm run check'
             }
             post {
                 success {
