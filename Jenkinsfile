@@ -1,15 +1,11 @@
 pipeline {
     agent any
-    options {
-        skipDefaultCheckout(true)
-    }
+    
 
     stages {
         stage('Clone') {
             steps {
                 echo 'Cloning repository...'
-              
-                bat 'git clone https://github.com/sadmanpieal/OSTAD-Assignment-module-3.git'
             }
         }
 
